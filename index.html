@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>poker</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<header>
+  <h1>
+      <a href="">ポーカー損益計算機</a><!--https://ymgsktk.github.io/memory-map/memory.html-->
+  </h1>
+  <nav class="pc-nav">
+      <ul class="gnavi">
+          <li><a href="#info-1"class="modaal-open">ABOUT</a></li>
+          <li><a href="#info-2"class="modaal-open">USAGE</a></li>
+      </ul>
+  </nav>
+</header>
+<body ondrop="onDrop(event);" ondragover="onDragOver(event);" style="background:#e8e8e8;">
+    <section id="info-1" class="hide-area">
+      <h2>ポーカー損益計算機とは</h2>
+        <p>・ポーカー終了後のチップ計算がめんどくさいし計算が合わない！と思ったことのあるそこのあなたに朗報です．</p>
+        <p>・このサイトでは、チップの価値と枚数を入れるだけで自動的に計算してくれます</p>
+        <p>・さらに計算した損益を自動的に保存してくれるため、ラウンドを越えて損益計算が可能になります</p>
+    </section>
+    <section id="info-2" class="hide-area">
+      <h2>ポーカー損益計算機の使い方</h2>
+      <p>1. チップの価値を入力する（価値の大きさは、究極＞最高＞高級＞上質＞一般）使わないチップには0と記入する</p>
+      <p>2. ユーザー名を登録して＋ボタンを押す</p>
+      <p>3. 左側には最初に持っていたチップ、右側には増減した後のチップ枚数を書く</p>
+      <p>4. 左側の計算結果は今回の損益、右側には今回を含んだこれまでの損益が出力される</p>
+      <p>5. 削除ボタンを押すと、ユーザごと消去されるので注意</p>
+    </section>
+    <div class = "background">
+    <div class="margin"></div>
+    <h1 id="midasi">～チップ額を決める～</h1>
+    <div class="margin"></div>
+    <div class="flex-container" id="tip-picture">
+        <img src="黒反転チップ.png" class="percentage-image">
+        <img src="緑反転チップ.png" class="percentage-image">
+        <img src="青反転チップ.png" class="percentage-image">
+        <img src="青と水色反転チップ.png" class="percentage-image">
+        <img src="赤反転チップ.png" class="percentage-image">
+
+    </div>
+    
+    <div id="input-tip">
+        <div>
+            <label for="tip1">究極：</label>
+            <input type="number" class = "tip" id="tip1" name="input1" placeholder="200">
+            
+        </div>
+        <div>
+            <label for="tip2">最高：</label>
+            <input type="number" class = "tip" id="tip2" name="input2" placeholder="100">
+            
+        </div>
+        <div>
+            <label for="tip3">高級：</label>
+            <input type="number" class = "tip" id="tip3" name="input3" placeholder="50">
+            
+        </div>
+        <div>
+            <label for="tip4">上質：</label>
+            <input type="number" class = "tip" id="tip4" name="input4" placeholder="10">
+        
+        </div>
+        <div>
+            <label for="tip4">一般：</label>
+            <input type="number" class = "tip" id="tip5" name="input5" placeholder="1">
+                    </div>
+    </div>
+    <div class="margin"></div>
+    <div class="flex-container-center">
+        <h1 id="midasi">～ユーザーを追加する～</h1>
+    </div>
+    <div class="flex-container-center">
+        <input type="text" class="name"placeholder="山田　太郎">
+        <button id="add-button">＋</button>
+    </div>
+    <div class="container" id="input-container">
+        <!-- 新しい入力フィールドがここに追加されます -->
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+    <script src = "cal.js"></script>
+</body>
+</html>

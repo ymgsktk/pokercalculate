@@ -1,0 +1,229 @@
+.flex-container {
+    display: flex;
+  
+    justify-content: space-around;
+
+}
+.flex-container-center {
+    display: flex;
+    gap: 10px; /* スペースを空けるためのプロパティ */
+    justify-content: center;
+}
+.percentage-image {
+    margin-left : 3%;
+    width: 10%;  /* 親要素の幅の50% */
+    height: auto; /* 親要素の高さの50% */
+    transition: transform 0.3s ease;
+}
+.percentage-image:hover{
+    transform: translateY(-5px); 
+}
+
+#mini-tip{
+  /*  display: flex;*/
+    width:5%;
+    height: auto;
+}
+.margin{
+    margin: 3%;
+}
+* {
+    box-sizing: border-box;
+ }
+#input-tip{
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-container {
+    position: flex;
+    overflow: hidden; /* 見えない部分を隠す */
+    width: 10%; /* 適宜設定 */
+    height: auto; /* 適宜設定 */
+}
+/*
+.hover-image-red1{
+    position: absolute;
+    top: 33.5%; 
+    left: 81%;
+    width: 10%;
+    height: auto;
+    opacity: 0; 
+    transition: opacity 0.5s ease, transform 0.5s ease-in-out;
+    transform: translateY(-20px);
+}
+.hover-image-red1:hover {
+    transform: translateY(20px);
+    opacity: 1;
+}*/
+
+.background{
+    margin: 1%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgb(189, 189, 189);
+}
+
+@media (max-width: 768px) {
+    input{
+        width: 70%;
+    }
+    #input-tip {
+        margin-left: 15%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column; /* 子要素を縦に並べる */
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+ .hina-mincho-regular {
+    font-family: "Hina Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+ body {
+   font-family: "Hina Mincho", serif;
+   max-width: auto;
+    margin: 0;
+    padding: 0;
+   /* font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    */background-color: #e6e6e6;/*#e6e6e6*/
+ }
+
+ header {
+    width: 100%;
+    padding: 30px 4% 10px;
+    background-color: #cdba76;
+    /*position: fixed;
+    top: 0;*/
+    display: flex;
+    align-items: center;
+}
+
+ h1 {
+    font-family: "Hina Mincho", serif;
+    margin: 0; padding: 0;
+    font-size: 25px;
+    text-align: center;
+ }
+
+ h2 {
+    font-family: "Hina Mincho", serif;
+    margin-top: 30px;
+    font-size: 30px;
+    text-align: center;
+ }
+
+ h3 {
+  font-family: "Hina Mincho", serif;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-size: 20px;
+  text-align: center;
+}
+
+ a {	
+    text-decoration: none;
+    color: #4b4b4b;
+ }
+
+ ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+ }
+
+ li {
+    margin: 0 0 0 15px;
+    font-size: 20px;
+ }
+
+ p #modal1 {
+   display: inline-block;
+   padding-right:  50px;  
+   padding-left: 50px;  
+ }
+
+ p.des {
+    padding-right:  15px;  
+    padding-left: 15px;  
+ }
+ p.date{
+    padding-right:  15px;  
+    padding-left: 15px;  
+ }
+ nav {
+    margin: 0 0 0 auto;
+ }
+
+.hide-area{
+	display: none;
+}
+
+.modaal-close:after, 
+.modaal-close:before{
+	background:#ccc;	
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+	background:#666;
+}
+
+ .gnavi li a{
+   /*線の基点とするためrelativeを指定*/
+  position: relative;
+}
+
+.gnavi li.current a,
+.gnavi li a:hover{
+  color:#ffffff;
+}
+
+.gnavi li a::after {
+   content: '';
+   /*絶対配置で線の位置を決める*/
+   position: absolute;
+   bottom: 0;
+   left: 10%;
+   /*線の形状*/
+   width: 80%;
+   height: 2px;
+   background:#ffffff;
+   /*アニメーションの指定*/
+   transition: all .3s;
+   transform: scale(0, 1);/*X方向0、Y方向1*/
+   transform-origin: center top;/*上部中央基点*/
+}
+ 
+#info-1{
+   font-family: "Hina Mincho", serif;
+}
+
+.plus-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+.plus-button:hover {
+    background-color: #0056b3;
+}
